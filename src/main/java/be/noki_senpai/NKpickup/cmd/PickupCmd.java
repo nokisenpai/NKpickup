@@ -38,7 +38,7 @@ public class PickupCmd implements CommandExecutor
 						if(NKpickup.material.contains(args[0].toString().toLowerCase()))
 						{
 							NKpickup.players.get(sender.getName()).addItemWhiteList(args[0].toString().toLowerCase());
-							sender.sendMessage(ChatColor.GREEN + " L'item " + ChatColor.BOLD + args[0].toString().toLowerCase() + ChatColor.RESET + ChatColor.RED + " a été ajouté à votre whitelist.");
+							sender.sendMessage(ChatColor.GREEN + " L'item " + ChatColor.BOLD + args[0].toString().toLowerCase() + ChatColor.RESET + ChatColor.GREEN + " a été ajouté à votre whitelist.");
 							return true;
 						}
 						else
