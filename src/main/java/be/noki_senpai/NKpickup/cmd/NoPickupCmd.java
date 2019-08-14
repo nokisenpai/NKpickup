@@ -38,7 +38,7 @@ public class NoPickupCmd implements CommandExecutor
 						if(NKpickup.material.contains(args[0].toString().toLowerCase()))
 						{
 							NKpickup.players.get(sender.getName()).addItemBlackList(args[0].toString().toLowerCase());
-							sender.sendMessage(ChatColor.GREEN + " L'item " + ChatColor.BOLD + args[0].toString().toLowerCase() + ChatColor.RESET + ChatColor.RED + " a été ajouté à votre blacklist.");
+							sender.sendMessage(ChatColor.GREEN + " L'item " + ChatColor.BOLD + args[0].toString().toLowerCase() + ChatColor.RESET + ChatColor.GREEN + " a été ajouté à votre blacklist.");
 							return true;
 						}
 						else
