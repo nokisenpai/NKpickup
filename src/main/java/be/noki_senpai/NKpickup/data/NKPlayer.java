@@ -113,9 +113,13 @@ public class NKPlayer
 	// Clear WhiteList and BlackList
 	//######################################
 	
-	public void clearList()
+	public void clearWhiteList()
 	{
 		whiteList.clear();
+	}
+	
+	public void clearBlackList()
+	{
 		blackList.clear();
 	}
 	

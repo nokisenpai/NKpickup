@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 import be.noki_senpai.NKpickup.NKpickup;
 
-public class PickupResetCmd implements CommandExecutor
+public class NoPickupResetCmd implements CommandExecutor
 {
 	
 	@Override
@@ -28,8 +28,8 @@ public class PickupResetCmd implements CommandExecutor
 				//if no argument
 				if(args.length == 0)
 				{
-					NKpickup.players.get(sender.getName()).clearWhiteList();
-					sender.sendMessage(ChatColor.GREEN + " Votre whitelist a été réinitialisée.");
+					NKpickup.players.get(sender.getName()).clearBlackList();
+					sender.sendMessage(ChatColor.GREEN + " Votre blacklist a été réinitialisée.");
 					return true;
 				}
 			}

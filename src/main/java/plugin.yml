@@ -1,6 +1,6 @@
 name: NKpickup
 main: be.noki_senpai.NKpickup.NKpickup
-version: 1.0.1
+version: 1.0.2
 api-version: 1.14
 author: 'NoKi_senpai'
 description: 'Allows players to cancel pickup of a items/blocks list'
@@ -13,5 +13,8 @@ commands:
     description: "Add an item/block to whitelist"
     usage: /<command> <item_name>
   pickupreset:
-    description: "Reset blacklist and whitelist"
+    description: "Reset whitelist"
+    usage: /<command>
+  nopickupreset:
+    description: "Reset blacklist"
     usage: /<command>
