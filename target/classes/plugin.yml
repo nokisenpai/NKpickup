@@ -7,14 +7,14 @@ description: 'Allows players to cancel pickup of a items/blocks list'
 website: www.lumen.ovh
 commands:
   nopickup:
-    description: "Add an item/block to blacklist"
-    usage: /<command> <item_name>
+	description: "Add an item/block to blacklist"
+	usage: /<command> <item_name>
   pickup:
-    description: "Add an item/block to whitelist"
-    usage: /<command> <item_name>
+	description: "Add an item/block to whitelist"
+	usage: /<command> <item_name>
   pickupreset:
-    description: "Reset whitelist"
-    usage: /<command>
+	description: "Reset whitelist"
+	usage: /<command>
   nopickupreset:
-    description: "Reset blacklist"
-    usage: /<command>
+	description: "Reset blacklist"
+	usage: /<command>
