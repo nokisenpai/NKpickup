@@ -1,9 +1,0 @@
-be\noki_senpai\NKpickup\listeners\PlayerPickup.class
-be\noki_senpai\NKpickup\NKpickup.class
-be\noki_senpai\NKpickup\data\NKPlayer.class
-be\noki_senpai\NKpickup\utils\CheckType.class
-be\noki_senpai\NKpickup\cmd\NoPickupCmd.class
-be\noki_senpai\NKpickup\cmd\PickupResetCmd.class
-be\noki_senpai\NKpickup\listeners\ItemCompleter.class
-be\noki_senpai\NKpickup\listeners\PlayerConnectionListener.class
-be\noki_senpai\NKpickup\cmd\PickupCmd.class
