@@ -39,7 +39,7 @@ public class NKpickup extends JavaPlugin
 	
 	// Fired when plugin is first enabled
 	@Override
-    public void onEnable() 
+	public void onEnable() 
 	{
 		instance = this;
 		
@@ -56,35 +56,35 @@ public class NKpickup extends JavaPlugin
 		getCommand("pickup").setExecutor(new PickupCmd());
 		getCommand("pickupreset").setExecutor(new PickupResetCmd());
 		
-        for (Material materialType : Material.values()) 
-        {
-            material.add(materialType.toString().toLowerCase());
-        }
+		for (Material materialType : Material.values()) 
+		{
+			material.add(materialType.toString().toLowerCase());
+		}
 			
-	    // Get all connected players
+		// Get all connected players
 		Bukkit.getOnlinePlayers().forEach(player -> players.putIfAbsent(player.getDisplayName(), new NKPlayer(player.getUniqueId())));
 			
-		console.sendMessage(ChatColor.WHITE + "      .--. ");
-		console.sendMessage(ChatColor.WHITE + "      |   '.   " + ChatColor.GREEN + PName + " by NoKi_senpai - successfully enabled !");
+		console.sendMessage(ChatColor.WHITE + "	  .--. ");
+		console.sendMessage(ChatColor.WHITE + "	  |   '.   " + ChatColor.GREEN + PName + " by NoKi_senpai - successfully enabled !");
 		console.sendMessage(ChatColor.WHITE + "'-..____.-'");
-    }
+	}
 	
 	
-    // Fired when plugin is disabled
-    @Override
-    public void onDisable() 
-    {
-    	players.clear();
-    	console.sendMessage(ChatColor.GREEN + PName + " has been disable.");
-    }
-    
+	// Fired when plugin is disabled
+	@Override
+	public void onDisable() 
+	{
+		players.clear();
+		console.sendMessage(ChatColor.GREEN + PName + " has been disable.");
+	}
+	
 
-    
+	
 	//######################################
 	// Getters & Setters
 	//######################################
-    
-    // Getter 'instance'
+	
+	// Getter 'instance'
 	public static NKpickup getInstance()
 	{
 		return instance;

@@ -20,18 +20,18 @@ public class PlayerPickup implements Listener
 			if(player.hasPermission("*") || player.hasPermission("nkpickup.*") || player.hasPermission("nkpickup.check") || player.hasPermission("nkpickup.user"))
 			{
 				//On récupère le nom de l'item que le joueur ramasse (dirt? stone? diorite?)
-			    String itemName = event.getItem().getItemStack().getType().toString().toLowerCase();
-			    
-			    if(NKpickup.players.get(player.getName()).checkItem(itemName))
-			    {
-			        // On ne veut pas de l'item
-			        
-			        // On annule le ramassage de l'item
-			        event.setCancelled(true);
-			        
-			        // On met un timer sur l'item en question pour qu'il ne puisse plus être ramassé pendant quelques secondes (ici 30 x 20 ticks = 30 secondes)
-			        event.getItem().setPickupDelay(30 * 20);
-			    }
+				String itemName = event.getItem().getItemStack().getType().toString().toLowerCase();
+				
+				if(NKpickup.players.get(player.getName()).checkItem(itemName))
+				{
+					// On ne veut pas de l'item
+					
+					// On annule le ramassage de l'item
+					event.setCancelled(true);
+					
+					// On met un timer sur l'item en question pour qu'il ne puisse plus être ramassé pendant quelques secondes (ici 30 x 20 ticks = 30 secondes)
+					event.getItem().setPickupDelay(30 * 20);
+				}
 			}
 		}
 	}

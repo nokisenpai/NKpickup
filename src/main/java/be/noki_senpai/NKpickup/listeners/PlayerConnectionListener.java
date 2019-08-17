@@ -13,15 +13,15 @@ import be.noki_senpai.NKpickup.data.NKPlayer;;
 
 public class PlayerConnectionListener implements Listener 
 {
-    @EventHandler
-    public void PlayerJoinEvent(final PlayerJoinEvent event) 
-    {
-    	NKpickup.players.putIfAbsent(event.getPlayer().getName(),new NKPlayer(event.getPlayer().getUniqueId()));
-    }
+	@EventHandler
+	public void PlayerJoinEvent(final PlayerJoinEvent event) 
+	{
+		NKpickup.players.putIfAbsent(event.getPlayer().getName(),new NKPlayer(event.getPlayer().getUniqueId()));
+	}
 
-    @EventHandler
-    public void onPlayerQuitEvent(final PlayerQuitEvent event) 
-    {	
-    	NKpickup.players.remove(Bukkit.getOfflinePlayer(event.getPlayer().getUniqueId()).getName());
-    }
+	@EventHandler
+	public void onPlayerQuitEvent(final PlayerQuitEvent event) 
+	{	
+		NKpickup.players.remove(Bukkit.getOfflinePlayer(event.getPlayer().getUniqueId()).getName());
+	}
 }
