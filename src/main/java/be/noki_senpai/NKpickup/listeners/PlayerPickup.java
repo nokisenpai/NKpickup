@@ -9,7 +9,7 @@ import be.noki_senpai.NKpickup.NKpickup;
 
 public class PlayerPickup implements Listener 
 {
-	//Event déclenché à chaque fois qu'un joueur ramasse un item
+	//Event dÃ©clenchÃ© Ã  chaque fois qu'un joueur ramasse un item
 	@EventHandler
 	public void OnPlayerPickup(EntityPickupItemEvent event)
 	{
@@ -19,7 +19,7 @@ public class PlayerPickup implements Listener
 			
 			if(player.hasPermission("*") || player.hasPermission("nkpickup.*") || player.hasPermission("nkpickup.check") || player.hasPermission("nkpickup.user"))
 			{
-				//On récupère le nom de l'item que le joueur ramasse (dirt? stone? diorite?)
+				//On rÃ©cupÃ©re le nom de l'item que le joueur ramasse (dirt? stone? diorite?)
 				String itemName = event.getItem().getItemStack().getType().toString().toLowerCase();
 				
 				if(NKpickup.players.get(player.getName()).checkItem(itemName))
@@ -29,8 +29,8 @@ public class PlayerPickup implements Listener
 					// On annule le ramassage de l'item
 					event.setCancelled(true);
 					
-					// On met un timer sur l'item en question pour qu'il ne puisse plus être ramassé pendant quelques secondes (ici 30 x 20 ticks = 30 secondes)
-					event.getItem().setPickupDelay(30 * 20);
+					// On met un timer sur l'item en question pour qu'il ne puisse plus Ãªtre ramassÃ© pendant quelques secondes (ici 30 x 20 ticks = 30 secondes)
+					event.getItem().setPickupDelay(5 * 20);
 				}
 			}
 		}

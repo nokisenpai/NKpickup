@@ -10,14 +10,14 @@ import be.noki_senpai.NKpickup.NKpickup;
 
 public class PickupResetCmd implements CommandExecutor
 {
-	
-	@Override
-	public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) 
-	{	
+
+	@Override public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args)
+	{
 		// Command called by a player
-		if (sender instanceof Player) 
+		if(sender instanceof Player)
 		{
-			if(!(sender.hasPermission("*") || sender.hasPermission("nkpickup.*") || sender.hasPermission("nkpickup.reset") || sender.hasPermission("nkpickup.user")))
+			if(!(sender.hasPermission("*") || sender.hasPermission("nkpickup.*") || sender.hasPermission("nkpickup.reset")
+					|| sender.hasPermission("nkpickup.user")))
 			{
 				// Send that the player does not have the permission
 				sender.sendMessage(ChatColor.RED + " Vous n'avez pas la permission !");
@@ -29,21 +29,19 @@ public class PickupResetCmd implements CommandExecutor
 				if(args.length == 0)
 				{
 					NKpickup.players.get(sender.getName()).clearWhiteList();
-					sender.sendMessage(ChatColor.GREEN + " Votre whitelist a été réinitialisée.");
+					sender.sendMessage(ChatColor.GREEN + " Votre whitelist a Ã©tÃ© rÃ©initialisÃ©e.");
 					return true;
 				}
 			}
 		}
-		
-		
+
 		// Command called by Console
-		if (sender instanceof ConsoleCommandSender)
+		if(sender instanceof ConsoleCommandSender)
 		{
 			sender.sendMessage(ChatColor.RED + " Commande inutile en console.");
 			return true;
 		}
-		
-		
+
 		return true;
 	}
 }

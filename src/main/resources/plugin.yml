@@ -1,20 +1,20 @@
 name: NKpickup
 main: be.noki_senpai.NKpickup.NKpickup
-version: 1.0.2
+version: 1.0.4
 api-version: 1.14
 author: 'NoKi_senpai'
 description: 'Allows players to cancel pickup of a items/blocks list'
 website: www.lumen.ovh
 commands:
   nopickup:
-	description: "Add an item/block to blacklist"
-	usage: /<command> <item_name>
+    description: "Add an item/block to blacklist"
+    usage: /<command> <item_name>
   pickup:
-	description: "Add an item/block to whitelist"
-	usage: /<command> <item_name>
+    description: "Add an item/block to whitelist"
+    usage: /<command> <item_name>
   pickupreset:
-	description: "Reset whitelist"
-	usage: /<command>
+    description: "Reset whitelist"
+    usage: /<command>
   nopickupreset:
-	description: "Reset blacklist"
-	usage: /<command>
+    description: "Reset blacklist"
+    usage: /<command>

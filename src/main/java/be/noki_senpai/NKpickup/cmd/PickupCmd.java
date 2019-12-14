@@ -28,7 +28,7 @@ public class PickupCmd implements CommandExecutor
 				//if no argument
 				if(args.length == 0)
 				{
-					sender.sendMessage(ChatColor.RED + " Vous devez spécifier au moins un nom d'item");
+					sender.sendMessage(ChatColor.RED + " Vous devez spÃ©cifier au moins un nom d'item");
 					return true;
 				}
 				else
@@ -38,12 +38,12 @@ public class PickupCmd implements CommandExecutor
 						if(NKpickup.material.contains(args[0].toString().toLowerCase()))
 						{
 							NKpickup.players.get(sender.getName()).addItemWhiteList(args[0].toString().toLowerCase());
-							sender.sendMessage(ChatColor.GREEN + " L'item " + ChatColor.BOLD + args[0].toString().toLowerCase() + ChatColor.RESET + ChatColor.GREEN + " a été ajouté à votre whitelist.");
+							sender.sendMessage(ChatColor.GREEN + " L'item " + ChatColor.BOLD + args[0].toString().toLowerCase() + ChatColor.RESET + ChatColor.GREEN + " a Ã©tÃ© ajoutÃ© Ã  votre whitelist.");
 							return true;
 						}
 						else
 						{
-							sender.sendMessage(ChatColor.RED + " L'item spécifié n'existe pas.");
+							sender.sendMessage(ChatColor.RED + " L'item spÃ©cifiÃ© n'existe pas.");
 							return true;
 						}
 					}
